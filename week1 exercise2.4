@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class test4 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the driving distance9: ");
+        double distance = scanner.nextDouble();
+
+        System.out.print("Enter miles per gallon: ");
+        double fuelEfficiency = scanner.nextDouble();
+
+        System.out.print("Enter the price per gallon: ");
+        double pricePerGallon = scanner.nextDouble();
+
+        double gallonsNeeded = distance / fuelEfficiency;
+        double costOfTrip = gallonsNeeded * pricePerGallon;
+
+        System.out.println("The cost of the trip is: $" + costOfTrip);
+
+        scanner.close();
+    }
+}
