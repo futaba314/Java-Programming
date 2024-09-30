@@ -1,0 +1,15 @@
+import java.util.Scanner;
+class tax {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter purchase amount: ");
+        double purchaseAmount = scanner.nextDouble();
+
+        double taxRate = 0.06;
+        double tax = purchaseAmount * taxRate;
+
+        System.out.printf("Sales tax is $%.2f\n", tax);
+
+        scanner.close();
+    }
+}
