@@ -1,0 +1,14 @@
+import java.util.Scanner;
+class Task18 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a two-digit number: ");
+        int number = scanner.nextInt();
+
+        if (number < 10) {
+            System.out.println("The number with leading zero is 0" + number);
+        } else {
+            System.out.println("The number is already two-digit: " + number);
+        }
+    }
+}
