@@ -1,0 +1,19 @@
+import java.util.Scanner;
+class PayIncrement {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the score: ");
+        int score = scanner.nextInt();
+        double pay = 1000; // Assuming initial pay is 1000 for example.
+
+        if (score > 90) {
+            pay *= 1.03;
+        } else {
+            pay *= 1.01;
+        }
+
+        System.out.println("New pay: $" + pay);
+
+        scanner.close();
+    }
+}
