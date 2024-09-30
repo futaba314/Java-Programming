@@ -1,0 +1,14 @@
+import java.util.Scanner;
+class monny {
+    public static void main(String[] args) {
+        double monthlyDeposit = 100;
+        double annualInterestRate = 0.05;
+        double monthlyInterestRate = annualInterestRate / 12;
+
+        double balance = 0;
+        for (int month = 1; month <= 6; month++) {
+            balance = (balance + monthlyDeposit) * (1 + monthlyInterestRate);
+            System.out.println("After " + month + " months, the balance is $" + balance);
+        }
+    }
+}
