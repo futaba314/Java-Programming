@@ -2,6 +2,8 @@ public class Lab2Task22 {
     public static void main(String[] args) {
         int y = 3;
         int x;
+
+        // 原始的 if-else 语句
         if (y == 1) {
             x = 1;
         } else if (y == 2) {
