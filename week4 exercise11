@@ -1,0 +1,19 @@
+import java.util.Scanner;
+class account {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the monthly saving amount: ");
+        double monthlySaving = scanner.nextDouble();
+        double annualInterestRate = 0.05;
+        double monthlyInterestRate = annualInterestRate / 12;
+
+        double balance = 0;
+        for (int month = 1; month <= 6; month++) {
+            balance = (balance + monthlySaving) * (1 + monthlyInterestRate);
+        }
+
+        System.out.println("After the sixth month, the account value is $" + balance);
+
+        scanner.close();
+    }
+}
