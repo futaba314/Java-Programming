@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class VowelOrConsonant {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a letter: ");
+        char letter = scanner.next().toLowerCase().charAt(0);
+        if (!Character.isAlphabetic(letter)) {
+            System.out.println("无效输入");
+        } 
+    else {
+            if (letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u') {
+                System.out.println("是元音");
+            } else {
+                System.out.println("是辅音");
+            }
+        }
+        scanner.close();
+    }
+}
