@@ -1,0 +1,23 @@
+public class MathFunctionsExample {
+    public static void main(String[] args) {
+        // 1. Math.max(2, 3)
+        int max1 = Math.max(2, 3);
+        System.out.println("Math.max(2, 3) 返回: " + max1);
+
+        // 2. Math.min(2.5, 4.6)
+        double min1 = Math.min(2.5, 4.6);
+        System.out.println("Math.min(2.5, 4.6) 返回: " + min1);
+
+        // 3. Math.max(Math.max(2.5, 4.6), Math.min(3, 5.6))
+        double max2 = Math.max(Math.max(2.5, 4.6), Math.min(3, 5.6));
+        System.out.println("Math.max(Math.max(2.5, 4.6), Math.min(3, 5.6)) 返回: " + max2);
+
+        // 4. Math.abs(-2)
+        int abs1 = Math.abs(-2);
+        System.out.println("Math.abs(-2) 返回: " + abs1);
+
+        // 5. Math.abs(-2.1)
+        double abs2 = Math.abs(-2.1);
+        System.out.println("Math.abs(-2.1) 返回: " + abs2);
+    }
+}
