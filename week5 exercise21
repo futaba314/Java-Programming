@@ -1,0 +1,7 @@
+public class StringLengthExample {
+    public static void main(String[] args) {
+        String str = "Hello World";
+        int length = str.length();
+        System.out.println("字符串 " + str + " 的长度为：" + length);
+    }
+}
