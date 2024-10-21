@@ -1,0 +1,55 @@
+import java.util.Scanner;
+public class PrintCalendar {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter full year (e.g., 2012): ");
+        int year = scanner.nextInt();
+        System.out.print("Enter month as number between 1 and 12: ");
+        int month = scanner.nextInt();
+        int startDay = getStartDay(year, month);
+        int numberOfDaysInMonth = getNumberOfDaysInMonth(year, month);
+        printCalendar(year, month, startDay, numberOfDaysInMonth);
+        scanner.close();
+    }
+    public static int getStartDay(int year, int month) {
+        if (month < 3) {
+            year--;
+            month += 12;
+        }
+        int k = year % 100;
+        int j = year / 100;
+        int dayOfWeek = (int) ((1 + (26 * (month + 1) / 10) + k + (k / 4) + (j / 4) + (5 * j)) % 7);
+        return dayOfWeek == 0? 7 : dayOfWeek;
+    }
+
+    public static int getNumberOfDaysInMonth(int year, int month) {
+        if (month == 2) {
+            if ((year % 4 == 0 && year % 100!= 0) || year % 400 == 0) {
+                return 29;
+            } else {
+                return 28;
+            }
+        } else if (month == 4 || month == 6 || month == 9 || month == 11) {
+            return 30;
+        } else {
+            return 31;
+        }
+    }
+    public static void printCalendar(int year, int month, int startDay, int numberOfDaysInMonth) {
+        System.out.println("\n" + getMonthName(month) + " " + year);
+        System.out.println("Sun Mon Tue Wed Thu Fri Sat");
+        for (int i = 1; i < startDay; i++) {
+            System.out.print("   ");
+        }
+        for (int i = 1; i <= numberOfDaysInMonth; i++) {
+            System.out.printf("%-3d", i);
+            if ((startDay + i - 1) % 7 == 0 || i == numberOfDaysInMonth) {
+                System.out.println();
+            }
+        }
+    }
+    public static String getMonthName(int month) {
+        String[] monthNames = {"Janu", "Febr", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"};
+        return monthNames[month - 1];
+    }
+}
