@@ -1,0 +1,45 @@
+import java.util.Random;
+
+public class Task13 {
+    public static void main(String[] args) {
+        int[][] matrix = new int[4][4];
+        Random random = new Random();
+
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                matrix[i][j] = random.nextInt(2);
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+        int[] rowSums = new int[4];
+        int[] colSums = new int[4];
+
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                rowSums[i] += matrix[i][j];
+                colSums[j] += matrix[i][j];
+            }
+        }
+
+        int largestRowIndex = 0;
+        int largestColIndex = 0;
+        int maxRowSum = rowSums[0];
+        int maxColSum = colSums[0];
+
+        for (int i = 1; i < 4; i++) {
+            if (rowSums[i] > maxRowSum) {
+                maxRowSum = rowSums[i];
+                largestRowIndex = i;
+            }
+            if (colSums[i] > maxColSum) {
+                maxColSum = colSums[i];
+                largestColIndex = i;
+            }
+        }
+
+        System.out.println("The largest row index: " + largestRowIndex);
+        System.out.println("The largest column index: " + largestColIndex);
+    }
+}
