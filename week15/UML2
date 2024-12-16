@@ -1,0 +1,9 @@
+BMI
+name:String
+age:int
+weight:double
+height:double
+BMI(String name, int age, double weight, double height)
+BMI(String name, double weight, double height)
+getBMI():double
+getStatus():String
