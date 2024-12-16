@@ -1,0 +1,16 @@
+Loan
+annualInterestRate: double
+numberOfYears: int
+loanAmount: double
+loanDate: java.util.Date
+Loan()
+Loan(double annualInterestRate, int numberOfYears, double loanAmount)
+getAnnualInterestRate(): double
+getNumberOfYears(): int
+getLoanAmount(): double
+getLoanDate(): java.util.Date
+setAnnualInterestRate(double annualInterestRate): void
+setNumberOfYears(int numberOfYears): void
+setLoanAmount(double loanAmount): void
+getMonthlyPayment(): double
+getTotalPayment(): double
